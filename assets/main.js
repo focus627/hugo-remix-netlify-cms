@@ -65,39 +65,39 @@ function initNav() {
   const menuEle = document.querySelector(".header-bar .menu");
 
   // 菜单点击
-  if (navItems) {
-    for (let item of navItems) {
-      item.onclick = function (e) {
-        e.preventDefault();
-        const target = e.target;
-        const parentTarget = e.target.parentElement;
-        const id =
-          target.getAttribute("data-id") ||
-          parentTarget.getAttribute("data-id");
+  // if (navItems) {
+  //   for (let item of navItems) {
+  //     item.onclick = function (e) {
+  //       e.preventDefault();
+  //       const target = e.target;
+  //       const parentTarget = e.target.parentElement;
+  //       const id =
+  //         target.getAttribute("data-id") ||
+  //         parentTarget.getAttribute("data-id");
 
-        const nextDom = document.querySelector("#" + id);
-        // 如果有目标元素才进行跳转
-        if (nextDom) {
-          const top = nextDom.offsetTop;
-          document.scrollingElement.scrollTo({
-            top: top,
-            left: 0,
-            behavior: "smooth",
-          });
+  //       const nextDom = document.querySelector("#" + id);
+  //       // 如果有目标元素才进行跳转
+  //       if (nextDom) {
+  //         const top = nextDom.offsetTop;
+  //         document.scrollingElement.scrollTo({
+  //           top: top,
+  //           left: 0,
+  //           behavior: "smooth",
+  //         });
 
-          setTimeout(() => {
-            changeHash(id);
-          }, 1000);
-        } else if (location.pathname !== "/" || location.pathname !== "/fr/") {
-          if (location.pathname.indexOf("/fr") > -1) {
-            location.href = "/fr/#" + id;
-          } else {
-            location.href = "/#" + id;
-          }
-        }
-      };
-    }
-  }
+  //         setTimeout(() => {
+  //           changeHash(id);
+  //         }, 1000);
+  //       } else if (location.pathname !== "/" || location.pathname !== "/fr/") {
+  //         if (location.pathname.indexOf("/fr") > -1) {
+  //           location.href = "/fr/#" + id;
+  //         } else {
+  //           location.href = "/#" + id;
+  //         }
+  //       }
+  //     };
+  //   }
+  // }
 
   // 主题切换点击
   if (themeEle) {

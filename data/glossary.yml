@@ -8,6 +8,7 @@ en:
   list: List
   cta1: See the demo
   cta2: Documentation
+  blog: Blog
 
 fr:
   home: Accueil
@@ -19,3 +20,4 @@ fr:
   list: Liste
   cta1: Demo
   cta2: Installation
+  blog: Blog
